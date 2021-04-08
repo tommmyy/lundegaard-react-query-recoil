@@ -2,8 +2,8 @@ import { Router } from "@reach/router";
 import "./App.css";
 import Ex1Vanilla from "./Ex1Vanilla";
 import Ex2Context from "./Ex2Context";
-// import Ex3Atom from "./Ex3Atom";
-import Ex3Atom from "./Ex3Atom-finish";
+import Ex3Atom from "./Ex3Atom";
+// import Ex3Atom from "./Ex3Atom-finish";
 import Ex4Selector from "./Ex4Selector";
 // import Ex4Selector from "./Ex4Selector-finish";
 
