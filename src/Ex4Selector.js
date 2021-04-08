@@ -37,13 +37,7 @@ const CookieController = () => {
         <Item key="cal">cal</Item>
       </Picker>
 
-      <Button
-        variant="cta"
-        onPress={
-          // updater
-          () => setCookies(cookies => cookies + 1)
-        }
-      >
+      <Button variant="cta" onPress={() => setCookies(cookies => cookies + 1)}>
         Gimme Cookie!
       </Button>
     </Flex>

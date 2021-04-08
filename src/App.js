@@ -6,6 +6,7 @@ import Ex3Atom from "./Ex3Atom";
 // import Ex3Atom from "./Ex3Atom-finish";
 import Ex4Selector from "./Ex4Selector";
 // import Ex4Selector from "./Ex4Selector-finish";
+import Ex5Snapshot from "./Ex5Snapshot";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Ex2Context path="/2" />
         <Ex3Atom path="/3" />
         <Ex4Selector path="/4" />
+        <Ex5Snapshot path="/5" />
       </Router>
     </main>
   );

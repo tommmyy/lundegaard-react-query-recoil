@@ -8,13 +8,14 @@ import {
   Text
 } from "@adobe/react-spectrum";
 import { NumberField } from "@react-spectrum/numberfield";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import {
   atom,
   useRecoilValue,
   useSetRecoilState,
   useRecoilState,
-  selector
+  selector,
+  useRecoilSnapshot
 } from "recoil";
 import { Center } from "./helpers";
 import styles from "./cookieJar.module.css";
@@ -51,6 +52,7 @@ const CookieController = () => {
 
   return (
     <Flex gap="size-100" direction="column">
+      {totalEnergy}
       <NumberField
         width="100%"
         label="Total energy"
@@ -64,7 +66,13 @@ const CookieController = () => {
         <Item key="cal">cal</Item>
       </Picker>
 
-      <Button variant="cta" onPress={() => setCookies(cookies => cookies + 1)}>
+      <Button
+        variant="cta"
+        onPress={
+          // updater
+          () => setCookies(cookies => cookies + 1)
+        }
+      >
         Gimme Cookie!
       </Button>
     </Flex>
@@ -72,7 +80,6 @@ const CookieController = () => {
 };
 
 const CookieJar = () => {
-  // const [cookies] = useRecoilState(cookiesAtom);
   const cookies = useRecoilValue(cookiesAtom);
   return (
     <Fragment>
@@ -98,16 +105,33 @@ const CookieJar = () => {
   );
 };
 
-const Ex4SelectorFinish = () => {
+const DevTools = () => {
+  const snapshot = useRecoilSnapshot();
+
+  useEffect(
+    () => {
+      console.debug("The following atoms were modified:");
+      for (const node of snapshot.getNodes_UNSTABLE({ isModified: true })) {
+        console.debug(node.key, snapshot.getLoadable(node));
+      }
+    },
+    [snapshot]
+  );
+
+  return null;
+};
+
+const Ex5Snapshot = () => {
   return (
     <Flex direction="column" gap="size-100" alignItems="center">
       <CookieController />
       <CookieJar />
+      <DevTools />
     </Flex>
   );
 };
 
-export default Ex4SelectorFinish;
+export default Ex5Snapshot;
 
 const Cookie = ({ style, ...rest }) => (
   <span
