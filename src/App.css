@@ -1,10 +1,9 @@
 .App {
-  text-align: center;
+  box-sizing: border-box;
+  min-height: 100vh;
+   padding: 40px 52px 0 52px;
 }
 
 
 
 
-.App-link {
-  color: #61dafb;
-}
