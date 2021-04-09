@@ -1,0 +1,16 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "value": "Learn React"
+    },
+    {
+      "id": 2,
+      "value": "Work hard for 10 or so years"
+    },
+    {
+      "id": 3,
+      "value": "Profit"
+    }
+  ]
+}
