@@ -7,6 +7,8 @@ import Ex3Atom from "./Ex3Atom";
 import Ex4Selector from "./Ex4Selector";
 // import Ex4Selector from "./Ex4Selector-finish";
 import Ex5Snapshot from "./Ex5Snapshot";
+import Ex6ReactQuery from "./Ex6ReactQuery";
+import Ex7ReactQueryParams from "./Ex7ReactQueryParams";
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
         <Ex3Atom path="/3" />
         <Ex4Selector path="/4" />
         <Ex5Snapshot path="/5" />
+        <Ex6ReactQuery path="/6" />
+        <Ex7ReactQueryParams path="/7" />
       </Router>
     </main>
   );

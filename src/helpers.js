@@ -5,3 +5,6 @@ export const Center = ({ children }) => (
     {children}
   </Flex>
 );
+export const Column = props => (
+  <Flex direction="column" alignItems="center" {...props} />
+);
