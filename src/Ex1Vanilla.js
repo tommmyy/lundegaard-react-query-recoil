@@ -1,3 +1,5 @@
+// show app UI
+// hoisted state -> prop drilling
 import { Button, Flex, Grid, repeat } from "@adobe/react-spectrum";
 import { useState } from "react";
 import { Center } from "./helpers";

@@ -1,3 +1,4 @@
+// představení atomu
 // RecoilRoot
 // atom cookiesState
 // cookiejar <Text>no.: {cookies}</Text>
